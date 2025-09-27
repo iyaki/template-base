@@ -27,6 +27,9 @@
 		"ghcr.io/devcontainers-extra/features/npm-package:1": {
 			"package": "opencode-ai",
 			"version": "latest"
+		},
+		"ghcr.io/schlich/devcontainer-features/jujutsu:0": {
+			"version": "latest"
 		}
 	},
 	"customizations": {
