@@ -56,3 +56,8 @@ Features to develop?
     ms devtunnel?
     apt install?
     lefthook?
+
+
+jujustsu -> git.enabled (vscode config)
+jj config set --user user.name "Some One"
+jj config set --user user.email "someone@example.com"
