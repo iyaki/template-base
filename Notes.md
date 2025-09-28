@@ -13,7 +13,6 @@ https://github.com/devcontainers-extra/features/blob/main/src/ts-node/install.sh
 
 https://github.com/devcontainers-extra/features/tree/main/src/npm-packages
 https://github.com/devcontainers-extra/features/tree/main/src/npm-package
-https://github.com/schlich/devcontainer-features/blob/main/src/jujutsu/devcontainer-feature.json
 
 Devcontainer
     image
@@ -33,11 +32,6 @@ Devcontainer
     extensions
     mcp?
 
-opencode.json?
-
-Mounts
-    opencode
-
 
 Explicacion worktrees?
 gwr?
@@ -52,12 +46,6 @@ Features to develop?
     add-user?
     clean-up-apt?
     completions
-    jujutsu?
     ms devtunnel?
     apt install?
     lefthook?
-
-
-jujustsu -> git.enabled (vscode config)
-jj config set --user user.name "Some One"
-jj config set --user user.email "someone@example.com"
