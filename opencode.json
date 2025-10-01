@@ -14,17 +14,17 @@
         "host",
         "mcp/playwright"
         ],
-      "enabled": true,
+      "enabled": true
     },
     "context7": {
       "type": "local",
       "command": ["npx", "-y", "@upstash/context7-mcp@latest"],
-      "enabled": true,
+      "enabled": true
     },
     "sequentialthinking": {
       "type": "local",
       "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking@latest"],
-      "enabled": true,
+      "enabled": true
     },
     "serena": {
       "type": "local",
@@ -36,7 +36,7 @@
         "--project", "/Salutte2",
         "--context", "ide-assistant"
       ],
-      "enabled": true
+      "enabled": false
     },
     "jam": {
       "type": "remote",
