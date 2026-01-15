@@ -65,7 +65,6 @@
     "opencode-pty",
     "@franlol/opencode-md-table-formatter@0.0.3",
     "@mohak34/opencode-notifier@latest",
-    "@plannotator/opencode@latest",
     "@spoons-and-mirrors/iam@latest"
   ],
   "keybinds": {
