@@ -1,5 +1,11 @@
 #! /usr/bin/env bash
 
-rm -f Notes.md
+SCRIPTPATH=$(dirname "$(realpath "$0")")
 
-rm -f setup.sh
+rm -f $SCRIPTPATH/Notes.md
+
+rm -rf $SCRIPTPATH/.git
+
+git init $SCRIPTPATH
+
+rm -f $SCRIPTPATH/setup.sh

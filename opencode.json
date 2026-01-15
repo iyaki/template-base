@@ -13,7 +13,7 @@
         "--network",
         "host",
         "mcp/playwright"
-        ],
+      ],
       "enabled": true
     },
     "context7": {
@@ -42,6 +42,26 @@
       "type": "remote",
       "url": "https://mcp.jam.dev/mcp",
       "enabled": false
+    },
+    "gh_grep": {
+      "type": "remote",
+      "url": "https://mcp.grep.app",
+      "enabled": true
+    },
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "enabled": true
     }
+  },
+  "plugin": [
+    "opencode-pty",
+    "@franlol/opencode-md-table-formatter@0.0.3",
+    "@mohak34/opencode-notifier@latest",
+    "@plannotator/opencode@latest",
+    "@spoons-and-mirrors/iam@latest"
+  ],
+  "keybinds": {
+    "command_list": "ctrl+l"
   }
 }
