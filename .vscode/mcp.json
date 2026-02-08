@@ -20,16 +20,13 @@
 			"type": "stdio",
 			"command": "uvx",
 			"args": [
-				"--from",
-				"git+https://github.com/oraios/serena",
+				"--from", "git+https://github.com/oraios/serena",
 				"serena",
 				"start-mcp-server",
-				"serena==latest",
-				"--context",
-				"ide-assistant"
-			],
-			"gallery": "https://api.mcp.github.com",
-			"version": "1.0.0"
+				"--project-from-cwd",
+				"--open-web-dashboard", "false",
+				"--context", "ide"
+			]
 		}
 	}
 }

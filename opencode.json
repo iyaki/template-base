@@ -24,11 +24,11 @@
 		"serena": {
 			"type": "local",
 			"command": [
-				"uvx",
-				"--from", "git+https://github.com/oraios/serena",
+				"uvx", "--from", "git+https://github.com/oraios/serena",
 				"serena",
 				"start-mcp-server",
-				"--project", "/Salutte2",
+				"--project-from-cwd",
+				"--open-web-dashboard", "false",
 				"--context", "ide"
 			],
 			"enabled": false
