@@ -2,4 +2,7 @@
 
 For use with [OpenCode](https://opencode.ai/).
 
-Change devcontainer name
+Remember to:
+ - Change devcontainer project name
+ - Modify AGENTS.md as needed
+ - Configure git hooks to work as backpressure for agents

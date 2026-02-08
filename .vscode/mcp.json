@@ -1,0 +1,35 @@
+{
+    "servers": {
+		"github": {
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp"
+		},
+		"upstash/context7": {
+			"type": "http",
+			"url": "https://mcp.context7.com/mcp"
+		},
+		"grep": {
+			"type": "http",
+			"url": "https://mcp.grep.app"
+		},
+		"gitmcp": {
+			"type": "http",
+			"url": "https://gitmcp.io/docs"
+		},
+		"oraios/serena": {
+			"type": "stdio",
+			"command": "uvx",
+			"args": [
+				"--from",
+				"git+https://github.com/oraios/serena",
+				"serena",
+				"start-mcp-server",
+				"serena==latest",
+				"--context",
+				"ide-assistant"
+			],
+			"gallery": "https://api.mcp.github.com",
+			"version": "1.0.0"
+		}
+	}
+}

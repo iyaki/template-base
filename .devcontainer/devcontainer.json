@@ -1,37 +1,43 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/universal
 {
 	"name": "Some project",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/universal:4-linux",
+
 	"mounts": [
 		{ "source": "${localEnv:HOME}/.opencode", "target": "/home/codespace/.local/share/opencode", "type": "bind" },
 		{ "source": "${localEnv:HOME}/intelephense/licence.txt", "target": "/home/codespace/intelephense/licence.txt", "type": "bind" }
 	],
+
+	"remoteEnv": {
+		"OPENCODE_EXPERIMENTAL_LSP_TOOL": "true"
+	},
+
 	"features": {
-		// Docker is needed to run the Playwright MCP server
-		"ghcr.io/devcontainers/features/git:1": {
-			"version": "latest"
-		},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		// "ghcr.io/devcontainers/features/git:1": {
+		// 	"version": "latest"
+		// },
 		// "ghcr.io/devcontainers/features/github-cli:1": {},
 		// "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
 		"ghcr.io/devcontainers-extra/features/npm-packages:1": {
-			"packages": "opencode-ai,@fission-ai/openspec"
-		}
-		// "ghcr.io/devcontainers-extra/features/uv:1": {}
+			"packages": "opencode-ai,@github/copilot,@google/gemini-cli"
+			// "packages": "opencode-ai,@github/copilot,@openai/codex"
+		},
+		"ghcr.io/devcontainers-extra/features/uv:1": {}
 	},
+
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"sst-dev.opencode",
-				"fedaykindev.openchamber",
 				"editorconfig.editorconfig",
 				"nhoizey.gremlins",
 				"streetsidesoftware.code-spell-checker-spanish",
 				"streetsidesoftware.code-spell-checker"
 			]
 		}
+	},
+
+	"postCreateCommand": {
+		"Setup agent browser": "npm install -g agent-browser && agent-browser install --with-deps"
 	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

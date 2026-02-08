@@ -9,3 +9,5 @@ rm -rf $SCRIPTPATH/.git
 git init $SCRIPTPATH
 
 rm -f $SCRIPTPATH/setup.sh
+
+printf "\nSetup completed! Change project name on devcontainer.json and README\n\n"
