@@ -13,7 +13,6 @@
 
 ## Deployment (Optional)
 
-
 ## Database Migrations (Optional)
 
 ## Local Testing
@@ -22,6 +21,6 @@
 
 ## Code Style
 
-## 
+##
 
 - When multiple code paths do similar things with slight variations, create a shared service with a request struct that cpatures the variations, rather than having each caller implemnt its own logic.

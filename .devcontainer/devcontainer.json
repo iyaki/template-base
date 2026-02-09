@@ -8,7 +8,17 @@
 	],
 
 	"remoteEnv": {
-		"OPENCODE_EXPERIMENTAL_LSP_TOOL": "true"
+		// https://opencode.ai/docs/cli/#environment-variables
+		"OPENCODE_EXPERIMENTAL_LSP_TOOL": "true",
+		"OPENCODE_EXPERIMENTAL_LSP_TY": "true",
+		"OPENCODE_ENABLE_EXPERIMENTAL_MODELS": "true",
+		"OPENCODE_DISABLE_AUTOCOMPACT": "true",
+		"OPENCODE_DISABLE_CLAUDE_CODE": "true",
+		"OPENCODE_DISABLE_FILETIME_CHECK": "true",
+		"OPENCODE_EXPERIMENTAL_DISABLE_FILEWATCHER": "true",
+		"OPENCODE_EXPERIMENTAL_MARKDOWN": "true",
+		"OPENCODE_EXPERIMENTAL_PLAN_MODE": "true",
+		"PATH": "${containerEnv:PATH}:scripts"
 	},
 
 	"features": {
