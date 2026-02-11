@@ -52,6 +52,7 @@
 
 	"postCreateCommand": {
 		"Setup agent browser": "agent-browser install --with-deps",
+		"Configure zeroshot provider": "zeroshot providers set-default Opencode",
 		"Pull playwright image": "docker pull $PLAYWRIGHT_DOCKER_IMAGE"
 	}
 
