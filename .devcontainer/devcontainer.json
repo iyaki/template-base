@@ -1,6 +1,6 @@
 {
 	"name": "Some project",
-	"image": "mcr.microsoft.com/devcontainers/universal:4-linux",
+	"image": "mcr.microsoft.com/devcontainers/universal:5-linux",
 
 	"mounts": [
 		{ "source": "${localEnv:HOME}/.opencode", "target": "/home/codespace/.local/share/opencode", "type": "bind" },
@@ -18,18 +18,22 @@
 		"OPENCODE_EXPERIMENTAL_DISABLE_FILEWATCHER": "true",
 		"OPENCODE_EXPERIMENTAL_MARKDOWN": "true",
 		"OPENCODE_EXPERIMENTAL_PLAN_MODE": "true",
-		"PATH": "${containerEnv:PATH}:scripts"
+		"OPENCODE_EXPERIMENTAL_ICON_DISCOVERY": "true",
+		"OPENCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS": "300000",
+		"PLAYWRIGHT_DOCKER_IMAGE": "mcr.microsoft.com/playwright:v1.58.2-noble",
+		"PATH": "${containerEnv:PATH}:scripts",
+		// For usage with /editr command from OpenCode - https://opencode.ai/docs/tui/#editor-setup
+		"EDITOR": "code --wait",
+		"VISUAL": "code --wait"
 	},
 
 	"features": {
 		// "ghcr.io/devcontainers/features/git:1": {
 		// 	"version": "latest"
 		// },
-		// "ghcr.io/devcontainers/features/github-cli:1": {},
 		// "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
 		"ghcr.io/devcontainers-extra/features/npm-packages:1": {
-			"packages": "opencode-ai,@github/copilot,@google/gemini-cli"
-			// "packages": "opencode-ai,@github/copilot,@openai/codex"
+			"packages": "opencode-ai,@github/copilot,@google/gemini-cli,@covibes/zeroshot,agent-browser"
 		},
 		"ghcr.io/devcontainers-extra/features/uv:1": {}
 	},
@@ -47,14 +51,12 @@
 	},
 
 	"postCreateCommand": {
-		"Setup agent browser": "npm install -g agent-browser && agent-browser install --with-deps"
+		"Setup agent browser": "agent-browser install --with-deps",
+		"Pull playwright image": "docker pull $PLAYWRIGHT_DOCKER_IMAGE"
 	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
