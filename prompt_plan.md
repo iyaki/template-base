@@ -17,6 +17,7 @@ Plan only. Do NOT implement anything.
 - Study `specs/*` to learn application requirements.
 - Study `IMPLEMENTATION_PLAN.md` (if present; it may be incorrect).
 - Study relevant source code in `src/*` (and other app directories if applicable) to compare against specs.
+- Use `git` to study recent changes on the specs related to the specified scope.
 
 Rules:
 
@@ -25,6 +26,7 @@ Rules:
 - Keep the plan concise but complete; prefer lists and tables over paragraphs.
 - Use `[x]` only when verified in code. Use `[ ]` if missing or unverified.
 - Regenerate the plan if it becomes stale, contradictory, or significantly out of sync with code.
+- If the specified scope has relationships with other domain areas, implementation may be needed in those areas as well (always study the related specs and code). Include this in the plan.
 
 ## Output Format Requirements
 
@@ -32,7 +34,7 @@ Write `IMPLEMENTATION_PLAN.md` using this structure and level of detail:
 
 Header
 
-- Title: `<Project/System> Implementation Plan (<Scope>)`
+- Title: `Implementation Plan (<Scope>)`
 - Status line: `**Status:** <summary (e.g., "UI Components Complete (39/39)")>`
 - Last Updated date: `YYYY-MM-DD`
 - Reference to primary spec(s)
@@ -81,7 +83,5 @@ Known Existing Work
 
 ## Stop Condition
 
-After writing/updating `IMPLEMENTATION_PLAN.md`:
-
-- If all gaps are validated and nothing is missing, reply with:
+**IMPORTANT**: After writing/updating if `IMPLEMENTATION_PLAN.md` already reflects the current gaps, reply with:
   `<promise>COMPLETE</promise>`
