@@ -31,7 +31,7 @@ if [[ "$MODE" != "build" && "$MODE" != "plan" ]]
 then
 	echo ""
 	echo "==============================================================="
-	echo " CUSTOM PROMPT FILE: $PROMPT_FILEE"
+	echo " CUSTOM PROMPT FILE: $PROMPT_FILE"
 	echo "==============================================================="
 	echo ""
 	sleep 5
