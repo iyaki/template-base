@@ -29,7 +29,7 @@
 		"serena": {
 			"type": "local",
 			"command": [
-				"INTELEPHENSE_LICENSE_KEY=\"{file:/home/codespace/intelephense/licence.txt}\"",
+				// "INTELEPHENSE_LICENSE_KEY=\"{file:/home/codespace/intelephense/licence.txt}\"",
 				"uvx", "--from", "git+https://github.com/oraios/serena",
 				"serena",
 				"start-mcp-server",

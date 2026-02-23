@@ -2,6 +2,10 @@
 	"name": "Some project",
 	"image": "mcr.microsoft.com/devcontainers/universal:5-linux",
 
+	"runArgs": [
+			"--userns=keep-id" // For podman users, to avoid permission issues with bind mountson on rootless mode.
+	],
+
 	"mounts": [
 		// OpenCode config and data - https://opencode.ai/docs/cli/#configuration-and-data
 		{ "source": "${localEnv:HOME}/.opencode", "target": "/home/codespace/.local/share/opencode", "type": "bind" },
@@ -11,6 +15,7 @@
 		// GitHub CLI config
 		{ "source": "${localEnv:HOME}/.config/gh/", "target": "/home/codespace/.config/gh/", "type": "bind" },
 		// Uncomment if you have an (PHP) Intelephense license and want to use it in the container (for opencode and oraios/serena)
+		// For usage with serena mcp uncomment also on opencode.json configuration file
 		// { "source": "${localEnv:HOME}/intelephense/licence.txt", "target": "/home/codespace/intelephense/licence.txt", "type": "bind" }
 	],
 
@@ -39,6 +44,12 @@
 	},
 
 	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": false,
+			"installOhMyZsh": false,
+			"installOhMyZshConfig": false,
+			"username": "automatic"
+		},
 		// "ghcr.io/devcontainers/features/git:1": {
 		// 	"version": "latest"
 		// },
@@ -74,10 +85,10 @@
 		4096
 	],
 	"portsAttributes": {
-    "4096": {
-      "label": "Default OpenCode server"
-    }
-  },
+		"4096": {
+			"label": "Default OpenCode server"
+		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
