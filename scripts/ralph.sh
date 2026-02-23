@@ -8,11 +8,12 @@ set -euo pipefail
 trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$SCRIPT_DIR/.."
+REPOSITORY_ROOT="$( git rev-parse --path-format=absolute --git-common-dir )"
+REPOSITORY_ROOT="${REPOSITORY_ROOT%/.git}"
 
 branch_name="$(git symbolic-ref HEAD 2>/dev/null)"
 branch_name=${branch_name##refs/heads/}
 
-printf "\n --------------------- %s ---------------------\n" "$(date)" >> "$PROJECT_ROOT/logs/ralph_$branch_name.log"
+printf "\n ------------------- %s -------------------\n" "$(date)" >> "$REPOSITORY_ROOT/logs/ralph_$branch_name.log"
 
-"$SCRIPT_DIR/agentic-loop.sh" $@ | tee -a "$PROJECT_ROOT/logs/ralph_$branch_name.log"
+"$SCRIPT_DIR/agentic-loop.sh" $@ | tee -a "$REPOSITORY_ROOT/logs/ralph_$branch_name.log"
