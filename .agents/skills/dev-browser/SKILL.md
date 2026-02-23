@@ -1,7 +1,6 @@
 ---
 name: dev-browser
 description: Browser automation. This skill enables agents to research, test web UIs, and interact with web applications using a headless browser.
-user-invocable: true
 ---
 
 # Dev Browser Integration

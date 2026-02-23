@@ -1,7 +1,6 @@
 ---
-name: spec
+name: spec-creator
 description: Generate comprehensive technical specifications with explicit scope, architecture, entities, APIs, SDKs, data models, and security constraints.
-user-invocable: true
 ---
 
 # Spec Authoring
