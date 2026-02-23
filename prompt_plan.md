@@ -81,7 +81,12 @@ Known Existing Work
 
 - Brief section listing confirmed existing implementations to prevent duplicate work
 
+Manual Deployment Tasks
+
+- Required section to document manual steps needed before or during production deployment (manual configuration, third-party service setup, API key acquisition, etc).
+- If not applicable, write exactly: `None`.
+
 ## Stop Condition
 
 **IMPORTANT**: After writing/updating if `IMPLEMENTATION_PLAN.md` already reflects the current gaps, reply with:
-  `<promise>COMPLETE</promise>`
+`<promise>COMPLETE</promise>`

@@ -20,5 +20,6 @@
 - Implement ONLY one task. Stop after committing.
 - Update `IMPLEMENTATION_PLAN.md` when the task is done.
 - Use the verification log format: `YYYY-MM-DD: <command or URL> - <result>`.
+- Keep the `Manual Deployment Tasks` section in the plan and use `None` when there are no tasks.
 - You may implement missing functionality if required, but study relevant `specs/*` first.
 - You may add temporary logging as needed and remove if no longer needed.
