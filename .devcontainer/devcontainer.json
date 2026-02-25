@@ -3,7 +3,8 @@
 	"image": "mcr.microsoft.com/devcontainers/universal:5-linux",
 
 	"runArgs": [
-			"--userns=keep-id" // For podman users, to avoid permission issues with bind mountson on rootless mode.
+		"--env-file", "${localWorkspaceFolder}/.devcontainer/.env",
+		"--userns=keep-id" // For podman users, to avoid permission issues with bind mountson on rootless mode.
 	],
 
 	"mounts": [
@@ -73,6 +74,7 @@
 		}
 	},
 
+	"initializeCommand": "${localWorkspaceFolder}/.devcontainer/setup.sh",
 	"postCreateCommand": {
 		"Setup agent browser": "agent-browser install --with-deps",
 		"Configure zeroshot provider": "zeroshot providers set-default Opencode",
