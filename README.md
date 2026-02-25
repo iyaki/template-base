@@ -10,4 +10,4 @@ Remember to:
 
 Optional configurations:
 
-- Add DATACOMMONS_API_KEY env var (on .env file) for usage with Data Commons MCP - https://apikeys.datacommons.org/
+- Add DATACOMMONS_API_KEY env var (on .env file) for usage with Data Commons MCP and enable the MCP server on opencode config - https://apikeys.datacommons.org/
