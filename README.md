@@ -3,6 +3,11 @@
 For use with [OpenCode](https://opencode.ai/).
 
 Remember to:
+
  - Change devcontainer project name
  - Modify AGENTS.md as needed
  - Configure git hooks to work as backpressure for agents
+
+Optional configurations:
+
+- Add DATACOMMONS_API_KEY env var (on .env file) for usage with Data Commons MCP - https://apikeys.datacommons.org/

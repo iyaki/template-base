@@ -29,7 +29,6 @@
 		"serena": {
 			"type": "local",
 			"command": [
-				// "INTELEPHENSE_LICENSE_KEY=\"{file:/home/codespace/intelephense/licence.txt}\"",
 				"uvx", "--from", "git+https://github.com/oraios/serena",
 				"serena",
 				"start-mcp-server",
@@ -37,6 +36,9 @@
 				"--open-web-dashboard", "false",
 				"--context", "ide"
 			],
+			"environment": {
+        // "INTELEPHENSE_LICENSE_KEY": "{file:/home/codespace/intelephense/licence.txt}"
+      },
 			"enabled": false
 		},
 		"jam": {
@@ -52,6 +54,14 @@
 		"github": {
 			"type": "remote",
 			"url": "https://api.githubcopilot.com/mcp/",
+			"enabled": false
+		},
+		"datacommons-mcp": {
+			"type": "remote",
+			"url": "https://api.datacommons.org/mcp",
+			"headers": {
+				"X-API-Key": "{env:DATACOMMONS_API_KEY}"
+			},
 			"enabled": false
 		},
 		"gitmcp": {
