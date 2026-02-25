@@ -88,12 +88,24 @@
 	},
 	"formatter": {
 	},
+	"keybinds": {
+		"command_list": "ctrl+l"
+	},
 	"plugin": [
-		"@tarquinen/opencode-dcp@latest",
+		"envsitter-guard@latest",
+		"@slkiser/opencode-quota"
+		// "opencode-mystatus",
+		// "@tarquinen/opencode-dcp@latest",
 		// "opencode-pty",
 		// "oh-my-opencode@latest"
 	],
-	"keybinds": {
-		"command_list": "ctrl+l"
-	}
+	// "experimental": {
+	// 	"quotaToast": {
+	// 		"enabledProviders": [
+	// 			"copilot",
+	// 			// "openai",
+	// 			// "google-antigravity"
+	// 		]
+	// 	}
+	// }
 }
