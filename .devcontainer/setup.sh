@@ -6,7 +6,7 @@ mkdir -p ~/.local/share/opencode
 mkdir -p ~/.local/state/opencode
 mkdir -p ~/.config/gh/
 
-ENVFILE_PATH="$SCRIPTPATH/.env"
+ENVFILE_PATH="$SCRIPTPATH/../.env"
 if [ ! -f "$ENVFILE_PATH" ]
 then
 	touch "$ENVFILE_PATH"

@@ -3,7 +3,7 @@
 	"image": "mcr.microsoft.com/devcontainers/universal:5-linux",
 
 	"runArgs": [
-		"--env-file", "${localWorkspaceFolder}/.devcontainer/.env",
+		"--env-file", "${localWorkspaceFolder}/.env",
 		"--userns=keep-id" // For podman users, to avoid permission issues with bind mountson on rootless mode.
 	],
 
