@@ -1,6 +1,8 @@
 ---
 name: shell-command
 description: Execute shell commands with strict adherence to non-interactive flags and environment variables to prevent hanging in OpenCode's headless environment.
+metadata:
+  source: https://github.com/JRedeker/opencode-shell-strategy/blob/1f83c6e477d2d2f1cb791d7cc9be7f165a4f670b/shell_strategy.md
 ---
 # Shell Non-Interactive Strategy (Global)
 
