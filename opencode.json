@@ -44,12 +44,7 @@
 		"web-search": {
 			"type": "local",
 			"command": [
-				"npx", "-y", "open-websearch@latest",
-				"serena",
-				"start-mcp-server",
-				"--project-from-cwd",
-				"--open-web-dashboard", "false",
-				"--context", "ide"
+				"npx", "-y", "open-websearch@latest"
 			],
 			"environment": {
 				"MODE": "stdio",
@@ -84,6 +79,11 @@
 			"type": "remote",
 			"url": "https://gitmcp.io/docs",
 			"enabled": true
+		},
+		"async-bash": {
+				"type": "local",
+				"command": ["uvx", "async-bash-mcp"],
+				"enabled": false
 		}
 	},
 	"formatter": {
