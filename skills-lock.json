@@ -6,6 +6,11 @@
       "sourceType": "github",
       "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
     },
+    "reddit": {
+      "source": "resciencelab/opc-skills",
+      "sourceType": "github",
+      "computedHash": "cb78c8355aba2e3334289c99e7ed06fb2d38a1defb17a649f5082611939a162d"
+    },
     "skill-creator": {
       "source": "anthropics/skills",
       "sourceType": "github",
