@@ -33,7 +33,7 @@
 		"OPENCODE_EXPERIMENTAL_PLAN_MODE": "true",
 		"OPENCODE_EXPERIMENTAL_ICON_DISCOVERY": "true",
 		"OPENCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS": "300000",
-		"PLAYWRIGHT_DOCKER_IMAGE": "mcr.microsoft.com/playwright:v1.58.2-noble",
+		// "PLAYWRIGHT_DOCKER_IMAGE": "mcr.microsoft.com/playwright:v1.58.2-noble",
 		"PATH": "${containerEnv:PATH}:scripts",
 		// For usage with /editr command from OpenCode - https://opencode.ai/docs/tui/#editor-setup
 		"EDITOR": "code --wait",
@@ -56,9 +56,12 @@
 		// },
 		"ghcr.io/devcontainers-extra/features/shfmt:1": {},
 		"ghcr.io/devcontainers-extra/features/npm-packages:1": {
-			"packages": "opencode-ai,@github/copilot,@google/gemini-cli,@covibes/zeroshot,agent-browser,repomix"
+			"packages": "agent-browser,repomix"
+			// "packages": "opencode-ai,@github/copilot,@google/gemini-cli,@covibes/zeroshot,agent-browser,repomix"
 		},
-		"ghcr.io/devcontainers-extra/features/uv:1": {}
+		"ghcr.io/devcontainers-extra/features/uv:1": {},
+		"ghcr.io/devcontainers-extra/features/opencode:1": {},
+		"ghcr.io/iyaki/devcontainer-features/opencode-ralph:1": {}
 	},
 
 	"customizations": {
@@ -76,9 +79,8 @@
 
 	"initializeCommand": "${localWorkspaceFolder}/.devcontainer/setup.sh",
 	"postCreateCommand": {
-		"Setup agent browser": "agent-browser install --with-deps",
-		"Configure zeroshot provider": "zeroshot providers set-default Opencode",
-		"Pull playwright image": "docker pull $PLAYWRIGHT_DOCKER_IMAGE"
+		"Setup agent browser": "agent-browser install --with-deps"
+		// "Pull playwright image": "docker pull $PLAYWRIGHT_DOCKER_IMAGE"
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
