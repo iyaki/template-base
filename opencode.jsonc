@@ -2,11 +2,6 @@
 	"$schema": "https://opencode.ai/config.json",
 	"model": "github-copilot/gpt-5.2-codex",
 	"small_model": "github-copilot/gpt-5-mini",
-	"tui": {
-		"scroll_acceleration": {
-			"enabled": true
-		}
-	},
 	"mcp": {
 		"browser-automation": {
 			"type": "local",
@@ -87,10 +82,7 @@
 		}
 	},
 	"formatter": {
-	},
-	"keybinds": {
-		"command_list": "ctrl+l"
-	},
+  },
 	"plugin": [
 		"envsitter-guard@latest",
 		"@slkiser/opencode-quota"
