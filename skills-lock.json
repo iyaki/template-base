@@ -1,6 +1,16 @@
 {
   "version": 1,
   "skills": {
+    "code-search": {
+      "source": "iyaki/opencode-base-template",
+      "sourceType": "github",
+      "computedHash": "731193d39a9977a3b65af35c126ab701101f728a4e086d69c70cf947db1badcf"
+    },
+    "dev-browser": {
+      "source": "iyaki/opencode-base-template",
+      "sourceType": "github",
+      "computedHash": "69157760c4dedc5a8688d801472a4e101c0d422f5a808b37000f8d2c8d8f0b94"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
@@ -10,6 +20,11 @@
       "source": "resciencelab/opc-skills",
       "sourceType": "github",
       "computedHash": "cb78c8355aba2e3334289c99e7ed06fb2d38a1defb17a649f5082611939a162d"
+    },
+    "shell-command": {
+      "source": "iyaki/opencode-base-template",
+      "sourceType": "github",
+      "computedHash": "8d55f17079e56f91df0af691bd5f6712f5fc53fef2f6a8d7fd6143ea39645b21"
     },
     "skill-creator": {
       "source": "anthropics/skills",
