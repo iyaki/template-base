@@ -1,4 +1,4 @@
-# Marta specifications
+# Project specifications
 
 Design docs and technical specifications
 
