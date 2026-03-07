@@ -1,7 +1,42 @@
 {
 	"$schema": "https://opencode.ai/config.json",
-	"model": "github-copilot/gpt-5.2-codex",
-	"small_model": "github-copilot/gpt-5-mini",
+	"compaction": {
+		"auto": false,
+		"prune": true,
+		"reserved": 0
+	},
+	"permission": {
+		"bash": {
+			"git commit*-n*": "deny",
+			"git commit*--no-verify*": "deny"
+		},
+		"edit": {
+			"lefthook.ymll": "ask",
+			"opencode.jsonc": "ask",
+			"logs/*": "deny"
+		}
+	},
+	"agent": {
+		"ralph": {
+			"description": "Hands-off agent for usage with Ralph Loops",
+			"mode": "primary",
+			"model": "github-copilot/gpt-5.3-codex",
+			"reasoningEffort": "xhigh",
+			// "textVerbosity": "low",
+			"tools": {
+				"web-search_*": false
+			},
+			"permission": {
+				"edit": {
+					".go-arch-lint": "deny",
+					".golangci.yml": "deny",
+					"lefthook.ymll": "deny",
+					"opencode.jsonc": "deny",
+					"logs/*": "deny"
+				}
+			}
+		}
+	},
 	"mcp": {
 		"browser-automation": {
 			"type": "local",
