@@ -48,23 +48,24 @@
 	},
 
 	"features": {
-		"ghcr.io/devcontainers/features/common-utils:2": {
+		"ghcr.io/devcontainers/features/common-utils:": {
 			"installZsh": false,
 			"installOhMyZsh": false,
 			"installOhMyZshConfig": false,
 			"username": "automatic"
 		},
-		// "ghcr.io/devcontainers/features/git:1": {
+		// "ghcr.io/devcontainers/features/git:": {
 		// 	"version": "latest"
 		// },
-		"ghcr.io/devcontainers-extra/features/shfmt:1": {},
-		"ghcr.io/devcontainers-extra/features/npm-packages:1": {
+		"ghcr.io/devcontainers-extra/features/shfmt:": {},
+		"ghcr.io/devcontainers-extra/features/npm-packages:": {
 			"packages": "agent-browser,repomix"
 			// "packages": "opencode-ai,@github/copilot,@google/gemini-cli,@covibes/zeroshot,agent-browser,repomix"
 		},
-		// "ghcr.io/devcontainers-extra/features/uv:1": {},
-		"ghcr.io/devcontainers-extra/features/opencode:1": {},
-		"ghcr.io/iyaki/devcontainer-features/opencode-ralph:1": {}
+		// "ghcr.io/devcontainers-extra/features/uv:": {},
+		"ghcr.io/devcontainers-extra/features/opencode:": {},
+		"ghcr.io/iyaki/devcontainer-features/opencode-ralph:": {},
+		"ghcr.io/iyaki/devcontainer-features/lefthook:": {}
 	},
 
 	"customizations": {
@@ -80,8 +81,8 @@
 
 	"initializeCommand": "${localWorkspaceFolder}/.devcontainer/setup.sh",
 	"postCreateCommand": {
-		"Setup agent browser": "agent-browser install --with-deps"
-		// "Setup lefthook": "lefthook install"
+		"Setup agent browser": "agent-browser install --with-deps",
+		"Setup lefthook": "lefthook install"
 		// "Pull playwright image": "docker pull $PLAYWRIGHT_DOCKER_IMAGE"
 	},
 	"postStartCommand": {
