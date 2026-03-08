@@ -83,6 +83,7 @@
 	"postCreateCommand": {
 		"Setup agent browser": "agent-browser install --with-deps",
 		"Setup lefthook": "lefthook install"
+		// "Pull scrapling image": "docker pull pyd4vinci/scrapling"
 		// "Pull playwright image": "docker pull $PLAYWRIGHT_DOCKER_IMAGE"
 	},
 	"postStartCommand": {

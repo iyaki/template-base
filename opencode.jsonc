@@ -51,6 +51,18 @@
 			],
 			"enabled": true
 		},
+		"web-scraping": {
+			"type": "local",
+			"command": [
+				"docker",
+				"run",
+				"-i",
+				"--rm",
+				"pyd4vinci/scrapling",
+				"mcp"
+			],
+			"enabled": false
+		},
 		"tech-docs": {
 			"type": "remote",
 			"url": "https://mcp.context7.com/mcp",
