@@ -12,3 +12,5 @@ Remember to:
 Optional configurations:
 
 - Add DATACOMMONS_API_KEY env var (on .env file) for usage with Data Commons MCP and enable the MCP server on opencode config - https://apikeys.datacommons.org/
+- Add Test driven development skill
+- Add secret `SEMGREP_APP_TOKEN` to Github Repo for usage with semgrep on security Github Action Workflow
